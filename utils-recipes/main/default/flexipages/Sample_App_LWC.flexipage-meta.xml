@@ -3,11 +3,13 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <identifier>7193</identifier>
                 <componentName>lwcAccountSelector</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
+                <identifier>7491</identifier>
                 <componentName>lwcContactDatatable</componentName>
             </componentInstance>
         </itemInstances>

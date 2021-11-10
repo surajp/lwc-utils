@@ -3,11 +3,13 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <identifier>7193</identifier>
                 <componentName>AccountSelector</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
+                <identifier>7491</identifier>
                 <componentName>ContactDatatable</componentName>
             </componentInstance>
         </itemInstances>

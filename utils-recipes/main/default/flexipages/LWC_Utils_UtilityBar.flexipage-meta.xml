@@ -32,6 +32,7 @@
                     <type>decorator</type>
                     <value>1</value>
                 </componentInstanceProperties>
+                <identifier>7720</identifier>
                 <componentName>MessageServiceHandler</componentName>
             </componentInstance>
         </itemInstances>
