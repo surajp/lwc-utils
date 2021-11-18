@@ -1,0 +1,6 @@
+<template>
+  <c-message-service boundary="recordsfilter"></c-message-service>
+  <template for:each={filters} for:item="filter">
+    <lightning-input key={filter} type="checkbox" label={filter} onchange={handleFilterChange}></lightning-input>
+  </template>
+</template>

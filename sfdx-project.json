@@ -1,38 +1,42 @@
 {
-    "packageDirectories": [
+  "packageDirectories": [
+    {
+      "path": "utils-core",
+      "default": false,
+      "package": "LWC Utils",
+      "versionName": "ver 1.9.0",
+      "versionNumber": "1.9.0.NEXT",
+      "postInstallUrl": "https://github.com/tsalb/lwc-utils/releases",
+      "releaseNotesUrl": "https://github.com/tsalb/lwc-utils/releases"
+    },
+    {
+      "path": "utils-recipes",
+      "default": false,
+      "package": "LWC Utils Recipes",
+      "versionName": "ver 1.9.0",
+      "versionNumber": "1.9.0.NEXT",
+      "postInstallUrl": "https://github.com/tsalb/lwc-utils/releases",
+      "releaseNotesUrl": "https://github.com/tsalb/lwc-utils/releases",
+      "dependencies": [
         {
-            "path": "utils-core",
-            "default": true,
-            "package": "LWC Utils",
-            "versionName": "ver 1.9.0",
-            "versionNumber": "1.9.0.NEXT",
-            "postInstallUrl": "https://github.com/tsalb/lwc-utils/releases",
-            "releaseNotesUrl": "https://github.com/tsalb/lwc-utils/releases"
-        },
-        {
-            "path": "utils-recipes",
-            "default": false,
-            "package": "LWC Utils Recipes",
-            "versionName": "ver 1.9.0",
-            "versionNumber": "1.9.0.NEXT",
-            "postInstallUrl": "https://github.com/tsalb/lwc-utils/releases",
-            "releaseNotesUrl": "https://github.com/tsalb/lwc-utils/releases",
-            "dependencies": [
-                {
-                    "package": "LWC Utils",
-                    "versionNumber": "1.9.0.LATEST"
-                }
-            ]
+          "package": "LWC Utils",
+          "versionNumber": "1.9.0.LATEST"
         }
-    ],
-    "namespace": "",
-    "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "53.0",
-    "packageAliases": {
-        "LWC Utils": "0Ho1Q000000blJiSAI",
-        "LWC Utils Recipes": "0Ho1Q000000blJnSAI",
-        "LWC Utils@1.8.0-1": "04t1Q000001MRtvQAG",
-        "LWC Utils@1.9.0-1": "04t1Q000001ACZsQAO",
-        "LWC Utils Recipes@1.9.0-1": "04t1Q000001ACZxQAO"
+      ]
+    },
+    {
+      "path": "force-app",
+      "default": true
     }
+  ],
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "53.0",
+  "packageAliases": {
+    "LWC Utils": "0Ho1Q000000blJiSAI",
+    "LWC Utils Recipes": "0Ho1Q000000blJnSAI",
+    "LWC Utils@1.8.0-1": "04t1Q000001MRtvQAG",
+    "LWC Utils@1.9.0-1": "04t1Q000001ACZsQAO",
+    "LWC Utils Recipes@1.9.0-1": "04t1Q000001ACZxQAO"
+  }
 }

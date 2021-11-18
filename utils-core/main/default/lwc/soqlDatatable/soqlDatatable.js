@@ -217,7 +217,7 @@ export default class SoqlDatatable extends LightningElement {
 
   @api
   async refreshTable() {
-    this.baseDatatable.forceShowSpinner();
+    this.baseDatatable?.forceShowSpinner();
     const cache = await this.fetchTableCache();
     if (cache) {
       // Currently on App flexipage or $CurrentRecord API not enabled

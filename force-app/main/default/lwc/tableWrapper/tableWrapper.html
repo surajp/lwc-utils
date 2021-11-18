@@ -1,0 +1,11 @@
+<template>
+  <c-message-service boundary="recordsfilter" onfilterchange={handleFilterChange}></c-message-service>
+  <c-soql-datatable
+    title={title}
+    object-api-name="Contact"
+    query-string={soqlQuery}
+    checkbox-type="multi"
+    sortable-fields="Name,Email,Title"
+    use-relative-max-height="true"
+  ></c-soql-datatable>
+</template>
