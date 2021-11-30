@@ -6,4 +6,9 @@
       <target>lightning__AppPage</target>
       <target>lightning__HomePage</target>
     </targets>
+    <targetConfigs>
+      <targetConfig targets="lightning__HomePage,lightning__AppPage">
+      	<property name="filterFieldsMap" type="string" default="" label="Filter name to field name map" description="JSON string mapping filter name to field name on the object"/>
+      </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>

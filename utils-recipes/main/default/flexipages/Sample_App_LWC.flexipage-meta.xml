@@ -3,14 +3,14 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <identifier>7193</identifier>
                 <componentName>lwcAccountSelector</componentName>
+                <identifier>c_lwcAccountSelector1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <identifier>7491</identifier>
                 <componentName>lwcContactDatatable</componentName>
+                <identifier>c_lwcContactDatatable1</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>

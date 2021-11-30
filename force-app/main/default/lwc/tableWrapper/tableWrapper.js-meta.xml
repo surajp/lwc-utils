@@ -4,5 +4,13 @@
     <isExposed>true</isExposed>
     <targets>
       <target>lightning__AppPage</target>
+      <target>lightning__RecordPage</target>
     </targets>
+    <targetConfigs>
+      <targetConfig targets="lightning__AppPage,lightning__RecordPage">
+      	<property name="objectApiName" type="string" default="Account" label="Object Api Name" description="Api name of the related object"/>
+      	<property name="filterFieldsMap" type="string" default="" label="Filter to fields map" description="JSON string version of a map of filter name from the filter component to field name on the SObject"/>
+      	<property name="parentFieldName" type="string" default="" label="Parent Field Name" description="Name of the parent lookup or M/D field for which related records should be shown"/>
+      </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
