@@ -19,8 +19,8 @@
                     <name>numVisibleActions</name>
                     <value>3</value>
                 </componentInstanceProperties>
-                <identifier>force_highlightsPanel1</identifier>
                 <componentName>force:highlightsPanel</componentName>
+                <identifier>force_highlightsPanel1</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -38,8 +38,8 @@
                     <name>richTextValue</name>
                     <value>&lt;p style=&quot;text-align: center;&quot;&gt;The below tables are all powered by &lt;span style=&quot;font-family: courier;&quot;&gt;soqlDatatable&lt;/span&gt;. The actual App Builder &lt;span style=&quot;font-family: courier;&quot;&gt;SOQL String&lt;/span&gt; configuration is shown right above.&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Inline Editing is enabled for all tables below!&lt;/p&gt;</value>
                 </componentInstanceProperties>
-                <identifier>flexiPage_richText1</identifier>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexiPage_richText1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -52,8 +52,8 @@
                     <name>richTextValue</name>
                     <value>&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;SELECT Name, Email, MailingState, Account.BillingState &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;FROM Contact &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;WHERE AccountId = $recordId &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;AND MailingState = $CurrentRecord.BillingState&lt;/span&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_richText2</identifier>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -101,8 +101,8 @@
                     <name>useRelativeMaxHeight</name>
                     <value>false</value>
                 </componentInstanceProperties>
-                <identifier>soqlDatatable1</identifier>
                 <componentName>soqlDatatable</componentName>
+                <identifier>soqlDatatable1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -115,8 +115,8 @@
                     <name>richTextValue</name>
                     <value>&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;SELECT Name, Email, Title, Phone, MailingState&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;FROM Contact &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;WHERE AccountId = $recordId&lt;/span&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_richText3</identifier>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -165,8 +165,8 @@
                     <name>useRelativeMaxHeight</name>
                     <value>false</value>
                 </componentInstanceProperties>
-                <identifier>soqlDatatable2</identifier>
                 <componentName>soqlDatatable</componentName>
+                <identifier>soqlDatatable2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -179,8 +179,8 @@
                     <name>richTextValue</name>
                     <value>&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;SELECT Name, Type, Industry,&lt;/span&gt;&lt;span style=&quot;font-family: courier; color: rgb(107, 109, 112);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;Website &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;FROM Account &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;WHERE OwnerId = $CurrentRecord.OwnerId&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;AND Id != $recordId&lt;/span&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_richText4</identifier>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText4</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -225,8 +225,8 @@
                     <name>useRelativeMaxHeight</name>
                     <value>false</value>
                 </componentInstanceProperties>
-                <identifier>soqlDatatable3</identifier>
                 <componentName>soqlDatatable</componentName>
+                <identifier>soqlDatatable3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -239,8 +239,8 @@
                     <name>richTextValue</name>
                     <value>&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;SELECT Name, Type, Website, Industry &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;FROM Account &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;WHERE Industry = $CurrentRecord.Industry &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: courier;&quot;&gt;AND Id != $recordId&lt;/span&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_richText5</identifier>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -285,8 +285,8 @@
                     <name>useRelativeMaxHeight</name>
                     <value>false</value>
                 </componentInstanceProperties>
-                <identifier>soqlDatatable4</identifier>
                 <componentName>soqlDatatable</componentName>
+                <identifier>soqlDatatable4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-1c420cf4-d7cd-4d8a-bb8e-7d97850ced61</name>
@@ -295,8 +295,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <identifier>recordPagePublisher1</identifier>
                 <componentName>recordPagePublisher</componentName>
+                <identifier>recordPagePublisher1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-ecc1ac3a-5aef-4e01-b56a-4bb2ffe005b0</name>
@@ -305,11 +305,59 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <identifier>recordPageSubscriber1</identifier>
                 <componentName>recordPageSubscriber</componentName>
+                <identifier>recordPageSubscriber1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-wfm6nxgoplf</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>fieldNames</name>
+                    <value>Name,Email,Title</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>filterFieldsMap</name>
+                    <value>{&quot;Title&quot;:{&quot;fieldName&quot;:&quot;Title&quot;}}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>objApiName</name>
+                    <value>Contact</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>parentFieldName</name>
+                    <value>AccountId</value>
+                </componentInstanceProperties>
+                <componentName>tableWrapper</componentName>
+                <identifier>c_tableWrapper1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>fieldNames</name>
+                    <value>Name,StageName,CloseDate,Amount,Type</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>filterFieldsMap</name>
+                    <value>{&quot;Title&quot;:{&quot;fieldName&quot;:&quot;Name&quot;}}</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>objApiName</name>
+                    <value>Opportunity</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>parentFieldName</name>
+                    <value>AccountId</value>
+                </componentInstanceProperties>
+                <componentName>tableWrapper</componentName>
+                <identifier>c_tableWrapper2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-16f5bd70-fe97-4ccb-a53c-6f50cb8c5d00</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -327,8 +375,8 @@
                     <name>title</name>
                     <value>SOQL Datatables</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_tab1</identifier>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -341,8 +389,8 @@
                     <name>title</name>
                     <value>MessageService Publish</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_tab2</identifier>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -355,8 +403,22 @@
                     <name>title</name>
                     <value>MessageService Sub</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_tab3</identifier>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab3</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-16f5bd70-fe97-4ccb-a53c-6f50cb8c5d00</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Related Table</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab6</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-08499d5d-be1a-491f-860b-b89791c7d41f</name>
@@ -366,11 +428,21 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>filterName</name>
+                    <value>Title</value>
+                </componentInstanceProperties>
+                <componentName>soqlFilter</componentName>
+                <identifier>c_soqlFilter1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-08499d5d-be1a-491f-860b-b89791c7d41f</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_tabset1</identifier>
                 <componentName>flexipage:tabset</componentName>
+                <identifier>flexipage_tabset1</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -380,8 +452,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <identifier>flexipage_detailPanel1</identifier>
                 <componentName>force:detailPanel</componentName>
+                <identifier>flexipage_detailPanel1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-cab0c3c4-37d6-4e4b-a40a-8c4c5ccec474</name>
@@ -394,8 +466,8 @@
                     <name>hideHeader</name>
                     <value>true</value>
                 </componentInstanceProperties>
-                <identifier>force_relatedListQuickLinksContainer1</identifier>
                 <componentName>force:relatedListQuickLinksContainer</componentName>
+                <identifier>force_relatedListQuickLinksContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-0187c3f6-569a-4969-9e0e-399fb161f837</name>
@@ -412,8 +484,8 @@
                     <name>title</name>
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_tab4</identifier>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab4</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -426,8 +498,8 @@
                     <name>title</name>
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_tab5</identifier>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab5</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-9bfb73b2-f758-4cb3-b5c6-43cceb067723</name>
@@ -444,8 +516,8 @@
                     <name>richTextValue</name>
                     <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b&gt;MessageServiceHandler&lt;/b&gt; is below to handle messageService events. &lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;This one is using &lt;b&gt;$recordId&lt;/b&gt; as its boundary.&lt;/p&gt;</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_richText6</identifier>
                 <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText6</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -454,8 +526,8 @@
                     <name>customBoundary</name>
                     <value>$recordId</value>
                 </componentInstanceProperties>
-                <identifier>MessageServiceHandler1</identifier>
                 <componentName>MessageServiceHandler</componentName>
+                <identifier>MessageServiceHandler1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -464,8 +536,8 @@
                     <name>tabs</name>
                     <value>Facet-9bfb73b2-f758-4cb3-b5c6-43cceb067723</value>
                 </componentInstanceProperties>
-                <identifier>flexipage_tabset2</identifier>
                 <componentName>flexipage:tabset</componentName>
+                <identifier>flexipage_tabset2</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
