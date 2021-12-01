@@ -53,11 +53,7 @@
     oncustomcellsetdraftvalue={handleSetDraftValue}
     oncustomcellreset={handleReset}
   >
-    <lightning-formatted-text
-      slot="displayCell"
-      name="picklist-display"
-      value={cellDisplayValue}
-    ></lightning-formatted-text>
+    <lightning-formatted-text slot="displayCell" value={cellDisplayValue}></lightning-formatted-text>
     <c-base-picklist
       slot="editCell"
       name="picklist-edit"

@@ -5,10 +5,11 @@
     <targets>
       <target>lightning__AppPage</target>
       <target>lightning__HomePage</target>
+      <target>lightning__RecordPage</target>
     </targets>
     <targetConfigs>
-      <targetConfig targets="lightning__HomePage,lightning__AppPage">
-      	<property name="filterFieldsMap" type="string" default="" label="Filter name to field name map" description="JSON string mapping filter name to field name on the object"/>
+      <targetConfig targets="lightning__HomePage,lightning__AppPage,lightning__RecordPage">
+      	<property name="filterName" type="string" default="" label="Filter Name" description="Name of the filter which is published when the event is fired"/>
       </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

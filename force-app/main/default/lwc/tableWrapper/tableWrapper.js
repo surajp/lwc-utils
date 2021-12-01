@@ -8,12 +8,12 @@ import { LightningElement, api } from 'lwc';
   }]
  */
 export default class TableWrapper extends LightningElement {
-  selectedFilters = [];
+  selectedFilters = {};
 
   soqlQuery = '';
 
   @api
-  objectApiName;
+  objApiName;
 
   @api
   filterFieldsMap;
@@ -24,31 +24,42 @@ export default class TableWrapper extends LightningElement {
   @api
   recordId;
 
+  @api
+  fieldNames;
+
   _filterFieldsMap;
 
   connectedCallback() {
-    this.soqlQuery = this.createQuery();
-    this._filterFieldsMap = JSON.parse(this.filterFieldsMap);
+    this._filterFieldsMap = JSON.parse(this.filterFieldsMap || '{}');
+    this.soqlQuery = this.createQueryString();
   }
 
-  createQuery(selectedFilters) {
-    let query = `Select Name,Email,Title from ${this.objectApiName} where ${this.parentFieldName}='${this.recordId}'`;
-    if (selectedFilters && selectedFilters.length > 0) {
-      query += ' and ';
-      selectedFilters.forEach(filterObj => {
-        query += `${this.createPredicate(filterObj)} and`;
-      });
+  createQueryString() {
+    let query = `Select ${this.fieldNames} from ${this.objApiName} where ${this.parentFieldName}='${this.recordId}'`;
+    if (this.selectedFilters && Object.keys(this.selectedFilters).length > 0) {
+      const predicates = [];
+      for (let filterName in this.selectedFilters) {
+        if (filterName && this.selectedFilters.hasOwnProperty(filterName))
+          predicates.push(this.createPredicateString(this.selectedFilters[filterName])); // predicate string would never be null/undefined
+      }
+      if (predicates.length > 0) {
+        query += ` and ${predicates.join(' and ')}`;
+      }
     }
-    query = query.replace(/\band$/, '');
+    //query = query.replace(/\band$/, '');
     return query + ' limit 50';
   }
 
-  createPredicate(filterObj) {
-    const fieldValues = filterObj.fieldValues;
+  createPredicateString(filterObj) {
     let fieldValueStr = '';
     let predicate = '';
-    const shouldAddQuotes = this.shouldAddQuotes(filterObj.fieldType);
-    const fieldName = this._filterFieldsMap[filterObj.fieldName];
+    const fieldProps = this._filterFieldsMap[filterObj.name]; // we would always have a match here since we delete any unmatched ones in `handleFilterChange` method itself
+    let shouldAddQuotes = fieldProps.addQuotes;
+    if (shouldAddQuotes === null || shouldAddQuotes === undefined) {
+      shouldAddQuotes = true; //by default, we add quotes around the field value in the where clause
+    }
+    const fieldName = fieldProps.fieldName;
+    const fieldValues = filterObj.fieldValues;
     if (fieldValues.length > 1) {
       fieldValueStr = shouldAddQuotes ? `('${fieldValues.join("','")}')` : `(${fieldValues.join(',')})`;
       predicate = `${fieldName} in ${fieldValueStr}`;
@@ -59,13 +70,15 @@ export default class TableWrapper extends LightningElement {
     return predicate;
   }
 
-  shouldAddQuotes(fieldType) {
-    return !fieldType || fieldType === 'text';
+  shouldAddFilter(filter) {
+    return filter.fieldValues && filter.fieldValues.length > 0 && this._filterFieldsMap[filter.name];
   }
 
   handleFilterChange(event) {
-    const selectedFilters = event.detail.value.filters;
-    this.soqlQuery = this.createQuery(selectedFilters);
+    const filter = event.detail.value.filter;
+    if (this.shouldAddFilter(filter)) this.selectedFilters[filter.name] = filter;
+    else if (this.selectedFilters[filter.name]) delete this.selectedFilters[filter.name];
+    this.soqlQuery = this.createQueryString(this.selectedFilters);
     this.title = 'Refreshed Contacts';
     this.template.querySelector('c-soql-datatable').refreshTableWithQueryString(this.soqlQuery);
   }
