@@ -8,6 +8,8 @@
     </targets>
     <targetConfigs>
       <targetConfig targets="lightning__AppPage,lightning__RecordPage">
+      	<property name="title" type="string" default="" label="Title" description="Title of the table"/>
+      	<property name="iconName" type="string" default="standard:account" label="Icon Name" description="Name of the icon to be used in the header"/>
       	<property name="objApiName" type="string" default="Account" label="Object Api Name" description="Api name of the related object"/>
       	<property name="filterFieldsMap" type="string" default="" label="Filter to fields map" description='JSON string version of a map of filter name from the filter component to field name on the SObject. Eg: {"myFilter":{"addQuotes":false,"fieldName":"MyCustomField__c"}}'/>
       	<property name="parentFieldName" type="string" default="" label="Parent Field Name" description="Name of the parent lookup or M/D field for which related records should be shown"/>

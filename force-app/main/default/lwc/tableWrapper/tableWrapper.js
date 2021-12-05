@@ -27,20 +27,26 @@ export default class TableWrapper extends LightningElement {
   @api
   fieldNames;
 
+  @api
+  title = '';
+
+  @api
+  iconName = 'standard:account';
+
   _filterFieldsMap;
 
   connectedCallback() {
     this._filterFieldsMap = JSON.parse(this.filterFieldsMap || '{}');
-    this.soqlQuery = this.createQueryString();
+    this.soqlQuery = this._createQueryString();
   }
 
-  createQueryString() {
+  _createQueryString() {
     let query = `Select ${this.fieldNames} from ${this.objApiName} where ${this.parentFieldName}='${this.recordId}'`;
     if (this.selectedFilters && Object.keys(this.selectedFilters).length > 0) {
       const predicates = [];
       for (let filterName in this.selectedFilters) {
         if (filterName && this.selectedFilters.hasOwnProperty(filterName))
-          predicates.push(this.createPredicateString(this.selectedFilters[filterName])); // predicate string would never be null/undefined
+          predicates.push(this._createPredicateString(this.selectedFilters[filterName])); // predicate string would never be null/undefined
       }
       if (predicates.length > 0) {
         query += ` and ${predicates.join(' and ')}`;
@@ -50,7 +56,7 @@ export default class TableWrapper extends LightningElement {
     return query + ' limit 50';
   }
 
-  createPredicateString(filterObj) {
+  _createPredicateString(filterObj) {
     let fieldValueStr = '';
     let predicate = '';
     const fieldProps = this._filterFieldsMap[filterObj.name]; // we would always have a match here since we delete any unmatched ones in `handleFilterChange` method itself
@@ -70,15 +76,15 @@ export default class TableWrapper extends LightningElement {
     return predicate;
   }
 
-  shouldAddFilter(filter) {
+  _shouldAddFilter(filter) {
     return filter.fieldValues && filter.fieldValues.length > 0 && this._filterFieldsMap[filter.name];
   }
 
   handleFilterChange(event) {
     const filter = event.detail.value.filter;
-    if (this.shouldAddFilter(filter)) this.selectedFilters[filter.name] = filter;
+    if (this._shouldAddFilter(filter)) this.selectedFilters[filter.name] = filter;
     else if (this.selectedFilters[filter.name]) delete this.selectedFilters[filter.name];
-    this.soqlQuery = this.createQueryString(this.selectedFilters);
+    this.soqlQuery = this._createQueryString(this.selectedFilters);
     this.title = 'Refreshed Contacts';
     this.template.querySelector('c-soql-datatable').refreshTableWithQueryString(this.soqlQuery);
   }

@@ -1,11 +1,18 @@
 <template>
-  <c-message-service boundary="recordsfilter" onfilterchange={handleFilterChange}></c-message-service>
-  <c-soql-datatable
-    title={title}
-    object-api-name={objectApiName}
-    query-string={soqlQuery}
-    checkbox-type="multi"
-    sortable-fields="Name,Email,Title"
-    use-relative-max-height="true"
-  ></c-soql-datatable>
+  <lightning-card title={title} icon-name={iconName}>
+    <c-generic-new-record
+      slot="actions"
+      record-id={recordId}
+      parent-field-name={parentFieldName}
+      object-name={objApiName}
+    ></c-generic-new-record>
+    <c-message-service boundary="recordsfilter" onfilterchange={handleFilterChange}></c-message-service>
+    <c-soql-datatable
+      object-api-name={objectApiName}
+      query-string={soqlQuery}
+      checkbox-type="multi"
+      sortable-fields="Name,Email,Title"
+      use-relative-max-height="true"
+    ></c-soql-datatable>
+  </lightning-card>
 </template>
