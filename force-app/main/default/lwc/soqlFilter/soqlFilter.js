@@ -1,6 +1,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class SoqlFilter extends LightningElement {
+  @api
   filters = 'Assistant Manager;Teacher;Doctor;Accountant;Engineer;Nurse;Recruiter;Sales Representative;Technical Writer;SVP, Administration and Finance'.split(
     ';'
   );

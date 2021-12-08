@@ -10,6 +10,7 @@
     <targetConfigs>
       <targetConfig targets="lightning__HomePage,lightning__AppPage,lightning__RecordPage">
       	<property name="filterName" type="string" default="" label="Filter Name" description="Name of the filter which is published when the event is fired"/>
+      	<property name="filters" type="string" default="" label="List of filters" description="List of filters values separated by semicolon"/>
       </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
