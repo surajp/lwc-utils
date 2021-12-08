@@ -2,13 +2,18 @@ import { LightningElement, api } from 'lwc';
 
 export default class SoqlFilter extends LightningElement {
   @api
-  filters = 'Assistant Manager;Teacher;Doctor;Accountant;Engineer;Nurse;Recruiter;Sales Representative;Technical Writer;SVP, Administration and Finance'.split(
-    ';'
-  );
+  filterString =
+    'Assistant Manager;Teacher;Doctor;Accountant;Engineer;Nurse;Recruiter;Sales Representative;Technical Writer;SVP, Administration and Finance';
   selectedFilters = [];
 
   @api
   filterName;
+
+  activeAccordionSection = 'A';
+
+  get filters() {
+    return this.filterString ? this.filterString.split(';') : [];
+  }
 
   _debounce(fn) {
     let timeOut = '';
@@ -32,5 +37,9 @@ export default class SoqlFilter extends LightningElement {
       .filter(e => e.checked)
       .map(e => e.label);
     this._debouncedPublishEvent();
+  }
+
+  handleToggleSection() {
+    this.activeAccordionSection = this.activeAccordionSection ? 'A' : null;
   }
 }

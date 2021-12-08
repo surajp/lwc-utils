@@ -1,10 +1,19 @@
 <template>
   <c-message-service boundary="recordsfilter"></c-message-service>
-  <lightning-layout multiple-rows vertical-align="center">
-    <template for:each={filters} for:item="filter">
-      <lightning-layout-item key={filter} alignment-bump="left" flexibility="auto" size="6">
-        <lightning-input type="checkbox" label={filter} onchange={handleFilterChange}></lightning-input>
-      </lightning-layout-item>
-    </template>
-  </lightning-layout>
+  <lightning-accordion
+    onsectiontoggle={handleToggleSection}
+    active-section-name={activeAccordionSection}
+    allow-multiple-sections-open
+    class="white"
+  >
+    <lightning-accordion-section name="A" label="Filters">
+      <lightning-layout multiple-rows vertical-align="center">
+        <template for:each={filters} for:item="filter">
+          <lightning-layout-item key={filter} alignment-bump="left" flexibility="auto" size="6">
+            <lightning-input type="checkbox" label={filter} onchange={handleFilterChange}></lightning-input>
+          </lightning-layout-item>
+        </template>
+      </lightning-layout>
+    </lightning-accordion-section>
+  </lightning-accordion>
 </template>
